@@ -1,0 +1,33 @@
+public class BTLevelOrderTraversal {
+
+   /* 
+    
+    class Node 
+       int data;
+       Node left;
+       Node right;
+   */
+   void LevelOrder(Node root)
+    {
+       if (root == null) {
+           return;
+       }
+       
+       ArrayList<Node> nodes  = new ArrayList<Node>();
+       nodes.add(root);
+       
+       while (nodes.size() > 0) {
+           Node n = nodes.remove(0);
+           System.out.print(n.data + " ");
+           if (n.left != null) {
+               nodes.add(n.left);
+           }
+           if (n.right != null) {
+               nodes.add(n.right);
+           }
+       }
+      
+    }
+
+
+}
