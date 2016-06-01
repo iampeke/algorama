@@ -1,0 +1,34 @@
+public class BTHeight {
+
+/*
+    
+  class Node 
+     int data;
+     Node left;
+     Node right;
+*/
+
+// Height defined as the max path number of NODES
+public int heightNodes(Node root) {
+   if (root == null) {
+       return 0;
+   }
+   int leftHeight = height(root.left);
+   int rightHeight = height(root.right);
+   
+   return (leftHeight >= rightHeight) ? (leftHeight + 1) : (rightHeight + 1);
+         
+ } 
+ 
+ public int heightEdges(Node root) {
+   if (root == null) {
+       return -1;
+   }
+   int leftHeight = height(root.left);
+   int rightHeight = height(root.right);
+   
+   return (leftHeight >= rightHeight) ? (leftHeight + 1) : (rightHeight + 1);
+         
+ }
+
+}
