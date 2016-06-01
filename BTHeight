@@ -20,6 +20,7 @@ public int heightNodes(Node root) {
          
  } 
  
+ // Height defined as the max path number of EDGES (HackerRank)
  public int heightEdges(Node root) {
    if (root == null) {
        return -1;
