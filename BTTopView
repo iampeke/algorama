@@ -1,0 +1,33 @@
+public class BTTopView {
+
+/*
+   class Node 
+       int data;
+       Node left;
+       Node right;
+*/
+void top_view(Node root)
+{
+    String result = "";
+    if (root.left != null) {
+        Node tempNode = root.left;
+        while(tempNode != null) {
+            result = tempNode.data + " " + result;
+            tempNode = tempNode.left;
+        }
+    }
+    result = result + root.data;
+    if (root.right != null) {
+        Node tempNode = root.right;
+        while (tempNode != null) {
+            result = result + " " + tempNode.data;
+            tempNode = tempNode.right;
+        }
+    }
+    
+    System.out.println(result);
+  
+}
+
+
+}
